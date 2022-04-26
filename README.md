@@ -14,7 +14,6 @@ Again this script was not my idea, it was origannily mw-shopseller and redesigne
 * qb-input
 
 # To Do:
-* Working on build in stashes
 * ui menu to sell items online
 
 # OPTIONAL
