@@ -56,6 +56,16 @@ AddEventHandler('qb-gallery:Stash',function(data)
     TriggerEvent("inventory:client:SetCurrentStash", "GalStash_"..id)
 end)
 
+-- Office Stash
+RegisterNetEvent('qb-gallery:officestash')
+AddEventHandler('qb-gallery:officestash', function()
+	TriggerEvent("inventory:client:SetCurrentStash", "GalOfficeStash")
+	TriggerServerEvent("inventory:server:OpenInventory", "stash", "GalOfficeStash", {
+		maxweight = 1000000,
+		slots = 20,
+	})
+end)
+
 -- exports['qb-target']:AddBoxZone("gallerypay", vector3(-422.49, 31.86, 46.23), 0.7, 0.5, { name="GalleryRegister", heading = 12, debugPoly=debug, minZ = 42.73,, maxZ = 46.93 }, 
 -- { options = { { event = "qb-pawnshop:client:Charge", icon = "fas fa-credit-card", label = "Charge Customer", job = "gallery" }, },
 --   distance = 2.0
@@ -97,6 +107,27 @@ Citizen.CreateThread(function()
 				}, 
 			},
   		distance = 2.0
+	})
+
+	-- Office Stash
+	exports['qb-target']:AddBoxZone("galleryofficestash", vector3(-483.24, 63.88, 52.41), 1.2, 1, {
+		name = "galleryofficestash",
+		heading = 265,
+		debug = Config.debugPoly,
+		minZ=49.31,
+		maxZ=53.31
+	}, {
+		options = {
+			{
+				event = "qb-gallery:officestash",
+				icon = "fas fa-diamond", 
+				label = "Open Stash", 
+				stash = "Office",
+				job = "gallery"
+
+			}, 
+		},
+	  distance = 2.0
 	})
 
 	---- TRAY 
