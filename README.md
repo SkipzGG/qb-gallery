@@ -14,6 +14,7 @@ Again this script was not my idea, it was origannily mw-shopseller and redesigne
 * qb-input
 
 # Bossmenu/Config (if still using qb-bossmenu)
+
 * ['gallery'] = vector3(-466.85, 47.89, 46.23),
 
 
@@ -45,7 +46,7 @@ Again this script was not my idea, it was origannily mw-shopseller and redesigne
 				payment = 300
 			},
 		},
-	},
+
 
 # To Do:
 * ui menu to sell items online
