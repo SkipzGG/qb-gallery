@@ -15,7 +15,7 @@ RegisterNetEvent('qb-gallery:server:sellItems', function()
             end
         end
         Player.Functions.AddMoney("cash", price)
-        TriggerEvent("qb-bossmenu:server:addAccountMoney", 'gallery', totalPrice)
+        exports['qb-management']:AddMoney('gallery', amount)
         TriggerClientEvent('QBCore:Notify', src, "You have sold your items")
     else 
 		TriggerClientEvent('QBCore:Notify', src, "You are not a pawnshop employee!")
@@ -32,7 +32,7 @@ RegisterServerEvent("qb-gallery:server:Charge", function(citizen, price)
 		if biller.PlayerData.citizenid ~= billed.PlayerData.citizenid then
 			if amount and amount > 0 then
                 billed.Functions.AddMoney('cash', amount, "gallery-payment")
-                TriggerEvent('qb-bossmenu:server:removeAccountMoney','gallery', amount)
+                exports['qb-management']:RemoveMoney('gallery', amount)
                 biller.Functions.AddMoney('bank', commission)
                 TriggerClientEvent('QBCore:Notify', billed.PlayerData.source, '$'..amount..' payment received.', 'success') -- CUSTOMER NOTIFICATION OF PAYMENT
                 TriggerClientEvent('QBCore:Notify', biller.PlayerData.source, '$'..amount..' payment sent, commission received successfully.', 'success') -- EMPLOYEE NOTIFICATION OF PAYMENT
