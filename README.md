@@ -49,7 +49,7 @@ As far as support goes. I will help with setting up if needed. Although it shoul
 			},
 		},
 
-#items.lua
+# items.lua
 	["diamond"] 					 = {["name"] = "diamond", 			  	  	  	["label"] = "Diamond", 					["weight"] = 5000, 		["type"] = "item", 		["image"] = "diamond.png", 				["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Shiny Diamond",  ["created"] = nil, 		["decay"] = 28.0,	},
 	["emerald"] 					 = {["name"] = "emerald", 			  	  	  	["label"] = "Emerald", 					["weight"] = 5000, 		["type"] = "item", 		["image"] = "emerald.png", 				["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "Emerald",  ["created"] = nil, 		["decay"] = 28.0,	},
 	['small_painting']				 = {['name'] = 'small_painting',				['label'] = 'Family Portrait',			['weight'] = 5000,		['type'] = 'item',		['image'] = 'smallpainting.png',		['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Small Family Portrait',  ["created"] = nil, 		["decay"] = 28.0,	},
