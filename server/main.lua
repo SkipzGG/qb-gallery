@@ -27,7 +27,7 @@ RegisterServerEvent("qb-gallery:server:Charge", function(citizen, price)
     local biller = QBCore.Functions.GetPlayer(source)
     local billed = QBCore.Functions.GetPlayer(tonumber(citizen))
     local amount = tonumber(price)
-    local commission = amount * 0.12 -- AMOUNT THE EMPLOYEE RECEIVES AS COMMISSION (12% BY DEFAULT)
+    local commission = amount * Config.Commission -- AMOUNT THE EMPLOYEE RECEIVES AS COMMISSION (12% BY DEFAULT)
 	if billed ~= nil then
 		if biller.PlayerData.citizenid ~= billed.PlayerData.citizenid then
 			if amount and amount > 0 then
@@ -41,7 +41,7 @@ RegisterServerEvent("qb-gallery:server:Charge", function(citizen, price)
 	else TriggerClientEvent('QBCore:Notify', src, 'Person not available', 'error') end
 end) 
 
--- Uncomment Below if you do not want a job check
+-- Uncomment Below if you do not want a job check (mw-shopseller) 
 
 --[[ RegisterServerEvent("qb-gallery:server:sellItems")
 AddEventHandler("qb-gallery:server:sellItems", function()

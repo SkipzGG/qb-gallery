@@ -66,11 +66,6 @@ AddEventHandler('qb-gallery:officestash', function()
 	})
 end)
 
--- exports['qb-target']:AddBoxZone("gallerypay", vector3(-422.49, 31.86, 46.23), 0.7, 0.5, { name="GalleryRegister", heading = 12, debugPoly=debug, minZ = 42.73,, maxZ = 46.93 }, 
--- { options = { { event = "qb-pawnshop:client:Charge", icon = "fas fa-credit-card", label = "Charge Customer", job = "gallery" }, },
---   distance = 2.0
--- })
-
 Citizen.CreateThread(function()
 	exports['qb-target']:AddBoxZone("galleryshop", vector3(-484.79, 60.95, 52.41), 1, 1, {
 			name="galleryshop",
